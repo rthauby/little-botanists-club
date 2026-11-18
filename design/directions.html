@@ -1,0 +1,177 @@
+<title>Little Botanists Looks</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&family=Young+Serif&family=Caveat:wght@600&family=Libre+Franklin:wght@400;600&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Inter:wght@400;600&display=swap">
+<style>
+/* Layout: a short intro, then three stacked "website previews", each a mini homepage in its own look. */
+:root{
+  --bg:#f3f5f1; --fg:#1d241f; --muted:#5b665e; --line:#d5dcd3; --chip:#e4ebe2;
+  --ui:"Inter",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#141916;--fg:#e8ede7;--muted:#9aa69c;--line:#2c352f;--chip:#212923;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141916;--fg:#e8ede7;--muted:#9aa69c;--line:#2c352f;--chip:#212923;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--ui);font-size:16px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:48px}
+header.intro h1{font-family:"Bricolage Grotesque",var(--ui);font-weight:800;font-size:clamp(28px,5vw,42px);line-height:1.1;margin:0 0 12px;text-wrap:balance}
+header.intro p{margin:0;max-width:62ch;color:var(--muted)}
+section.dir{display:flex;flex-direction:column;gap:14px}
+.dir-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px}
+.dir-head h2{margin:0;font-size:22px;font-family:"Bricolage Grotesque",var(--ui);font-weight:800}
+.tag{font-size:12px;letter-spacing:.06em;text-transform:uppercase;background:var(--chip);padding:3px 10px;border-radius:999px;color:var(--muted)}
+.dir-head p{flex-basis:100%;margin:0;color:var(--muted);max-width:70ch}
+.swatches{display:flex;gap:6px;flex-wrap:wrap}
+.swatches span{width:28px;height:28px;border-radius:50%;border:1px solid var(--line)}
+.frame{border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 10px 30px -18px rgba(0,0,0,.35)}
+.bar{display:flex;gap:6px;align-items:center;padding:8px 12px;background:var(--chip);border-bottom:1px solid var(--line)}
+.bar i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.bar b{font-weight:400;font-size:12px;color:var(--muted);margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.site{padding:20px clamp(16px,4vw,40px) 32px;display:flex;flex-direction:column;gap:24px}
+.nav{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:16px;font-size:14px}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:center}
+.hero > *{min-width:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cards > *{min-width:0}
+@media (max-width:640px){.hero,.cards{grid-template-columns:1fr}}
+
+/* ---------- A: Sprout & Play ---------- */
+.a{background:#fffdf4;color:#24332a;font-family:"Nunito",sans-serif}
+.a .logo{font-family:"Baloo 2",cursive;font-weight:800;font-size:20px;color:#2f8f4e;display:flex;align-items:center;gap:8px}
+.a .logo .seed{width:26px;height:26px;background:#ffc93c;border-radius:50% 0 50% 50%;transform:rotate(-45deg)}
+.a .nav li{font-weight:700}
+.a h3{font-family:"Baloo 2",cursive;font-weight:800;font-size:clamp(30px,5vw,48px);line-height:1;margin:0 0 12px;color:#24332a;text-wrap:balance}
+.a h3 em{font-style:normal;color:#2f8f4e}
+.a .lede{margin:0 0 18px;font-size:17px}
+.a .btn{display:inline-block;background:#ff7a59;color:#fff;font-weight:800;padding:12px 22px;border-radius:999px;box-shadow:0 4px 0 #d85a3b}
+.a .art{aspect-ratio:1;max-width:100%;border-radius:40% 60% 55% 45%/50% 45% 55% 50%;background:#7ec8e3;position:relative;overflow:hidden}
+.a .art .sun{position:absolute;width:30%;aspect-ratio:1;border-radius:50%;background:#ffc93c;top:12%;right:14%}
+.a .art .hill{position:absolute;left:-10%;right:-10%;bottom:-30%;height:60%;background:#5cbf6f;border-radius:50%}
+.a .art .stem{position:absolute;left:44%;bottom:22%;width:6px;height:34%;background:#2f8f4e;border-radius:3px}
+.a .art .leaf{position:absolute;width:20%;height:12%;background:#2f8f4e;border-radius:0 100% 0 100%;bottom:40%;left:47%}
+.a .art .leaf.l{left:auto;right:56%;border-radius:100% 0 100% 0;bottom:46%}
+.a .card{background:#fff;border:3px solid #24332a;border-radius:18px;padding:14px 16px}
+.a .card:nth-child(1){background:#e3f6e7}.a .card:nth-child(2){background:#fff1c7}.a .card:nth-child(3){background:#e0f2fa}
+.a .card h4{font-family:"Baloo 2",cursive;margin:0 0 4px;font-size:19px}
+.a .card p{margin:0;font-size:14px}
+
+/* ---------- B: Field Notebook ---------- */
+.b{background-color:#f7f6ef;background-image:linear-gradient(#e5e7dc 1px,transparent 1px),linear-gradient(90deg,#e5e7dc 1px,transparent 1px);background-size:22px 22px;color:#2e3a31;font-family:"Libre Franklin",sans-serif}
+.b .logo{font-family:"Young Serif",serif;font-size:20px}
+.b .logo small{display:block;font-family:"Caveat",cursive;font-size:16px;color:#6b8f5e;line-height:1}
+.b .nav li{border-bottom:1px dashed #9aa98f}
+.b h3{font-family:"Young Serif",serif;font-weight:400;font-size:clamp(28px,4.6vw,44px);line-height:1.08;margin:0 0 12px;text-wrap:balance}
+.b .note{font-family:"Caveat",cursive;font-size:22px;color:#b3543a;transform:rotate(-2deg);display:inline-block;margin-bottom:8px}
+.b .lede{margin:0 0 18px;max-width:46ch}
+.b .btn{display:inline-block;border:2px solid #2e3a31;padding:10px 20px;font-weight:600;background:#dfe8cf}
+.b .specimen{background:#fffef8;border:1px solid #c9ccbd;padding:18px;transform:rotate(1.5deg);box-shadow:0 8px 18px -12px rgba(0,0,0,.4);position:relative}
+.b .specimen::before{content:"";position:absolute;top:-10px;left:40%;width:70px;height:22px;background:rgba(214,204,150,.75);transform:rotate(-4deg)}
+.b .leafdraw{aspect-ratio:4/3;max-width:100%;border:1px solid #c9ccbd;display:grid;place-items:center;background:#f1f3ea}
+.b .leafdraw div{width:46%;aspect-ratio:1/1.6;border:2px solid #4f7a45;border-radius:0 100% 0 100%;transform:rotate(30deg);background:linear-gradient(135deg,transparent 49%,#4f7a45 49%,#4f7a45 51%,transparent 51%)}
+.b .label{margin-top:10px;font-size:13px;display:grid;grid-template-columns:auto 1fr;gap:2px 10px}
+.b .label dt{color:#6f7a6a;text-transform:uppercase;font-size:11px;letter-spacing:.08em;padding-top:2px}
+.b .label dd{margin:0}
+.b .label i{font-family:"Young Serif",serif}
+.b .card{border-top:2px solid #2e3a31;padding-top:10px}
+.b .card h4{font-family:"Young Serif",serif;font-weight:400;margin:0 0 4px;font-size:19px}
+.b .card p{margin:0;font-size:14px}
+
+/* ---------- C: Greenhouse ---------- */
+.c{background:#163323;color:#eaf3ea;font-family:"Inter",sans-serif}
+.c .logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:19px;letter-spacing:-.01em}
+.c .logo span{color:#b8e6a7}
+.c .nav li{opacity:.85}
+.c h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(32px,6vw,58px);line-height:.98;letter-spacing:-.02em;margin:0 0 14px;text-wrap:balance}
+.c h3 span{color:#f4b6c2}
+.c .lede{margin:0 0 20px;color:#bcd3bf;max-width:44ch}
+.c .btn{display:inline-block;background:#b8e6a7;color:#163323;font-weight:600;padding:12px 22px;border-radius:6px}
+.c .photo{aspect-ratio:4/5;max-width:100%;border-radius:200px 200px 8px 8px;background:radial-gradient(circle at 30% 70%,#f4b6c2 0 12%,transparent 13%),radial-gradient(circle at 68% 40%,#f4b6c2 0 9%,transparent 10%),linear-gradient(160deg,#4e8a5b,#2a5a39 60%,#1f4a2e);position:relative}
+.c .photo small{position:absolute;bottom:10px;left:12px;font-size:12px;color:#d6e8d8}
+.c .card{background:#1f4430;border-radius:8px;padding:16px}
+.c .card .k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#b8e6a7}
+.c .card h4{font-family:"Bricolage Grotesque",sans-serif;margin:4px 0;font-size:19px}
+.c .card p{margin:0;font-size:14px;color:#bcd3bf}
+footer.ask{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);max-width:70ch}
+</style>
+
+<div class="wrap">
+  <header class="intro">
+    <h1>Three looks for The Little Botanists Club</h1>
+    <p>Each preview is a rough homepage in a different style. The words are placeholders. Pick the one that feels most like your club, or tell me what you like from each and I can mix them.</p>
+  </header>
+
+  <!-- A -->
+  <section class="dir">
+    <div class="dir-head">
+      <h2>A · Sprout &amp; Play</h2><span class="tag">Bright and playful</span>
+      <p>Sunny colors, round friendly letters and simple cut-paper shapes. Feels made for kids, and easy for them to read.</p>
+    </div>
+    <div class="swatches" aria-label="Colors"><span style="background:#2f8f4e"></span><span style="background:#ffc93c"></span><span style="background:#ff7a59"></span><span style="background:#7ec8e3"></span><span style="background:#fffdf4"></span></div>
+    <div class="frame"><div class="bar"><i></i><i></i><i></i><b>littlebotanists.club</b></div>
+      <div class="site a">
+        <div class="nav"><div class="logo"><span class="seed"></span>Little Botanists</div><ul><li>Meetups</li><li>Our Garden</li><li>Photos</li><li>Join</li></ul></div>
+        <div class="hero">
+          <div><h3>Dig in, get muddy, <em>grow something!</em></h3><p class="lede">A club for curious kids who love plants, bugs and getting their hands dirty.</p><span class="btn">See the next meetup</span></div>
+          <div class="art" aria-hidden="true"><span class="sun"></span><span class="hill"></span><span class="stem"></span><span class="leaf"></span><span class="leaf l"></span></div>
+        </div>
+        <div class="cards">
+          <div class="card"><h4>Saturday Sprouts</h4><p>Plant bean seeds and take home your own pot.</p></div>
+          <div class="card"><h4>Bug Hunt</h4><p>Magnifying glasses ready. Who lives under the log?</p></div>
+          <div class="card"><h4>Join the club</h4><p>Ages 4 to 10. Grown-ups welcome too.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B -->
+  <section class="dir">
+    <div class="dir-head">
+      <h2>B · Field Notebook</h2><span class="tag">Curious and hands-on</span>
+      <p>Like a nature journal: graph paper, taped-in leaf specimens and handwritten notes. Feels like real young scientists at work.</p>
+    </div>
+    <div class="swatches" aria-label="Colors"><span style="background:#2e3a31"></span><span style="background:#4f7a45"></span><span style="background:#dfe8cf"></span><span style="background:#b3543a"></span><span style="background:#f7f6ef"></span></div>
+    <div class="frame"><div class="bar"><i></i><i></i><i></i><b>littlebotanists.club</b></div>
+      <div class="site b">
+        <div class="nav"><div class="logo">The Little Botanists Club<small>est. in our backyard</small></div><ul><li>Field Trips</li><li>Our Finds</li><li>Photos</li><li>Join</li></ul></div>
+        <div class="hero">
+          <div><span class="note">Today's discovery →</span><h3>Every leaf has a story. Let's find out what it is.</h3><p class="lede">Young explorers meet to plant, observe and record the green world around them.</p><span class="btn">Come on a field trip</span></div>
+          <div class="specimen">
+            <div class="leafdraw" aria-hidden="true"><div></div></div>
+            <dl class="label"><dt>Name</dt><dd>Red oak <i>(Quercus rubra)</i></dd><dt>Found by</dt><dd>Maya, age 7</dd><dt>Where</dt><dd>Park pond trail</dd></dl>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card"><h4>Next field trip</h4><p>Leaf rubbings at the park, Saturday morning.</p></div>
+          <div class="card"><h4>Our specimen wall</h4><p>Everything the club has found and named.</p></div>
+          <div class="card"><h4>Become a botanist</h4><p>Sign up and get your own field notebook.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C -->
+  <section class="dir">
+    <div class="dir-head">
+      <h2>C · Greenhouse</h2><span class="tag">Calm and modern</span>
+      <p>Deep green, soft blossom pink and big clean lettering. Polished and trustworthy, so it speaks to parents as much as kids.</p>
+    </div>
+    <div class="swatches" aria-label="Colors"><span style="background:#163323"></span><span style="background:#1f4430"></span><span style="background:#b8e6a7"></span><span style="background:#f4b6c2"></span><span style="background:#eaf3ea"></span></div>
+    <div class="frame"><div class="bar"><i></i><i></i><i></i><b>littlebotanists.club</b></div>
+      <div class="site c">
+        <div class="nav"><div class="logo">little<span>botanists</span></div><ul><li>About</li><li>Events</li><li>Gallery</li><li>Join</li></ul></div>
+        <div class="hero">
+          <div><h3>Growing curious kids, <span>one seed</span> at a time.</h3><p class="lede">Monthly garden meetups where children learn to plant, care for and understand living things.</p><span class="btn">Join the club</span></div>
+          <div class="photo" aria-hidden="true"><small>Your club photo here</small></div>
+        </div>
+        <div class="cards">
+          <div class="card"><div class="k">Next meetup</div><h4>Winter bulbs</h4><p>Saturday, 10 AM at the community garden.</p></div>
+          <div class="card"><div class="k">Gallery</div><h4>This season</h4><p>Photos from our fall harvest day.</p></div>
+          <div class="card"><div class="k">Members</div><h4>Sign up</h4><p>A short form for parents, takes a minute.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="ask">Nothing here is final. Colors, fonts and wording all change easily once you pick a direction.</footer>
+</div>
